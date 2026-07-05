@@ -448,6 +448,7 @@ in rec {
               class = "system-manager";
               value = system-manager.lib.makeSystemConfig {
                 modules = [
+                  nixpkgsConfigModule
                   perSystemSMModule
                   path
                 ] ++ mkHomeUsersModule hostName home-manager.nixosModules.default;
